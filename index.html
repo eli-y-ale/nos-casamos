@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#ffffff" />
 
   <!-- Tipografías elegantes y modernas -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Galleta&family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <!-- Tailwind Play CDN (no requiere build) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -20,7 +20,7 @@
       theme: {
         extend: {
           fontFamily: {
-            serif: ['Cormorant Garamond', 'serif'],
+            serif: ['Galleta', 'Great Vibes', 'serif'],
             sans: ['Inter', 'system-ui', 'sans-serif']
           },
           colors: {
@@ -48,8 +48,10 @@
   <header class="relative grain">
     <!-- TODO: Cambiá la imagen de portada -->
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" alt="Portada" class="h-full w-full object-cover fade-mask" />
-      <div class="absolute inset-0 bg-white/60"></div>
+      <img src="img/hero.jpg" 
+     alt="Eli y Ale" 
+     class="h-full w-full object-cover object-center" />
+      <class="absolute inset-0 bg-black/30 md:bg-black/20"></div>
     </div>
     <div class="relative max-w-6xl mx-auto px-6 pt-24 pb-28 md:pt-36 md:pb-40 text-center">
       <p class="uppercase tracking-[0.3em] text-sm text-accent/70">¡Nos casamos!</p>
@@ -63,7 +65,9 @@
   </header>
 
   <!-- === COUNTDOWN === -->
-  <section id="countdown" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+  <img src="img/sobre-nosotros.jpg" 
+     alt="Eli y Ale" 
+     class="w-full h-full object-cover" />
     <div class="rounded-3xl border border-accent/10 p-8 md:p-12 text-center bg-white/70">
       <h2 class="text-3xl md:text-4xl font-serif">Falta muy poco</h2>
       <p class="mt-2 text-accent/70">Guardá la fecha y compartí este sitio con quien quieras ♥</p>
@@ -80,6 +84,24 @@
       </div>
     </div>
   </section>
+<!-- === SOBRE NOSOTROS === -->
+<section id="nosotros" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+  <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-serif">Nuestra historia</h2>
+      <p class="mt-4 text-accent/80 leading-relaxed">
+        Nos conocimos hace algunos años y desde entonces compartimos viajes, mates y sueños.
+        Creemos en celebrar el amor con quienes más queremos y por eso nos encanta que seas parte
+        de este momento. ¡Gracias por acompañarnos! ♥
+      </p>
+    </div>
+    <div class="rounded-3xl overflow-hidden border border-accent/10">
+      <!-- Foto de la pareja (de prueba) -->
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop"
+           alt="Eli y Ale" class="w-full h-full object-cover" />
+    </div>
+  </div>
+</section>
 
   <!-- === DETALLE / ITINERARIO === -->
   <section id="detalle" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
@@ -194,7 +216,7 @@
   </section>
 
   <footer class="py-12 text-center text-accent/60">
-    <p>Hecho con ♥ por [Tu nombre].</p>
+    <p>Hecho con ♥ por [Aurora].</p>
     <p class="mt-1">Compartí este enlace: <span class="underline decoration-dotted" id="shareUrl"></span></p>
   </footer>
 
