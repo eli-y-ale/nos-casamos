@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación - Eli & Ale</title>
+  <meta name="description" content="Invitación de casamiento de Eli & Ale. Toda la información: fecha, lugar, mapa, RSVP y más." />
+  <meta property="og:title" content="Invitación - Eli & Ale" />
+  <meta property="og:description" content="¡Nos casamos! Te esperamos. Toda la info aquí." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Tipografías elegantes y modernas -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Tailwind Play CDN (no requiere build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            primary: '#8B5CF6', // lila suave
+            accent: '#111827'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Pequeños detalles visuales */
+    .grain { position: relative; }
+    .grain:after {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.35"/></svg>');
+      mix-blend-mode: multiply;
+    }
+    .fade-mask { mask-image: linear-gradient(to bottom, black 70%, transparent); }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-accent font-sans">
+  <!-- === HERO === -->
+  <header class="relative grain">
+    <!-- TODO: Cambiá la imagen de portada -->
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" alt="Portada" class="h-full w-full object-cover fade-mask" />
+      <div class="absolute inset-0 bg-white/60"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6 pt-24 pb-28 md:pt-36 md:pb-40 text-center">
+      <p class="uppercase tracking-[0.3em] text-sm text-accent/70">¡Nos casamos!</p>
+      <h1 class="mt-4 text-5xl md:text-7xl font-serif font-light">Eli & Ale</h1>
+      <p class="mt-6 text-lg md:text-xl text-accent/80">Viernes 20 de Febrero de 2026 · Laprida, Buenos Aires</p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#rsvp" class="inline-flex items-center justify-center rounded-2xl px-6 py-3 bg-primary text-white hover:opacity-90 transition">Confirmar asistencia</a>
+        <a href="#detalle" class="inline-flex items-center justify-center rounded-2xl px-6 py-3 border border-accent/20 hover:bg-accent/5 transition">Ver detalles</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- === COUNTDOWN === -->
+  <section id="countdown" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div class="rounded-3xl border border-accent/10 p-8 md:p-12 text-center bg-white/70">
+      <h2 class="text-3xl md:text-4xl font-serif">Falta muy poco</h2>
+      <p class="mt-2 text-accent/70">Guardá la fecha y compartí este sitio con quien quieras ♥</p>
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4" data-event-datetime="2026-02-20T21:00:00-03:00">
+        <div class="rounded-2xl border border-accent/10 p-6"><div class="text-4xl font-semibold" id="d">0</div><div class="text-accent/60">Días</div></div>
+        <div class="rounded-2xl border border-accent/10 p-6"><div class="text-4xl font-semibold" id="h">0</div><div class="text-accent/60">Horas</div></div>
+        <div class="rounded-2xl border border-accent/10 p-6"><div class="text-4xl font-semibold" id="m">0</div><div class="text-accent/60">Minutos</div></div>
+        <div class="rounded-2xl border border-accent/10 p-6"><div class="text-4xl font-semibold" id="s">0</div><div class="text-accent/60">Segundos</div></div>
+      </div>
+      <div class="mt-6 text-sm text-accent/60">* Podés cambiar fecha/hora editando el atributo <code>data-event-datetime</code></div>
+      <div class="mt-8">
+        <!-- Enlace a Google Calendar (editá los parámetros) -->
+        <a class="underline hover:no-underline" target="_blank" rel="noopener" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Casamiento%20Eli%20%26%20Ale&dates=20260221T000000Z/20260221T060000Z&details=Casamiento%20de%20Eli%20%26%20Ale&location=La%20Rural%2C%20Laprida%2C%20Buenos%20Aires%2C%20Argentina">Agregar a Google Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- === DETALLE / ITINERARIO === -->
+  <section id="detalle" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-serif">La celebración</h2>
+        <p class="mt-4 text-accent/80 leading-relaxed">Ceremonia y fiesta en el mismo lugar. Te esperamos para compartir música, risas y mucho amor. Por favor llegá con tiempo ♥</p>
+        <ul class="mt-6 space-y-3 text-accent/80">
+          <li>⏱️ <strong>Recepción:</strong> 19:00</li>
+          <li>💍 <strong>Ceremonia:</strong> 20:00</li>
+          <li>🎉 <strong>Fiesta:</strong> 21:00</li>
+          <li>🕛 <strong>Cierre:</strong> 02:00</li>
+        </ul>
+        <div class="mt-8 flex gap-3">
+          <a href="#mapa" class="rounded-2xl px-5 py-3 border border-accent/20 hover:bg-accent/5 transition">Cómo llegar</a>
+          <a href="#rsvp" class="rounded-2xl px-5 py-3 bg-primary text-white hover:opacity-90 transition">Confirmar asistencia</a>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden border border-accent/10">
+        <!-- TODO: Reemplazá por una foto de ustedes -->
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1600&auto=format&fit=crop" alt="Foto" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- === MAPA === -->
+  <section id="mapa" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div class="rounded-3xl border border-accent/10 overflow-hidden">
+      <div class="p-6 md:p-8">
+        <h2 class="text-3xl md:text-4xl font-serif">Ubicación</h2>
+        <p class="mt-2 text-accent/70">La Rural · Laprida, Buenos Aires</p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a class="rounded-xl px-4 py-2 border border-accent/20 hover:bg-accent/5" target="_blank" rel="noopener" href="https://maps.app.goo.gl/zyZ6DNYrcF6LeBb88">Abrir en Google Maps</a>
+          <a class="rounded-xl px-4 py-2 border border-accent/20 hover:bg-accent/5" target="_blank" rel="noopener" href="https://waze.com/ul?ll=-34.603722%2C-58.381592&navigate=yes">Abrir en Waze</a>
+        </div>
+      </div>
+      <!-- TODO: Cambiá el iframe por el mapa de tu lugar -->
+      <div class="aspect-[16/9] w-full">
+        <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52530.20130808161!2d-58.428!3d-34.603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28e8a48e15%3A0x6aa0b0b0b0b0b0b0!2sBuenos%20Aires!5e0!3m2!1ses!2sar!4v1699999999999" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- === RSVP === -->
+  <section id="rsvp" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-serif">Confirmación (RSVP)</h2>
+        <p class="mt-3 text-accent/80">Por favor confirmá antes del <strong>1 de octubre</strong>. Si tenés restricciones alimentarias o querés dejarnos un mensaje, contanos aquí abajo.</p>
+        <ul class="mt-4 text-accent/80 space-y-2">
+          <li>📧 Alternativa: <a class="underline" href="mailto:novios@example.com?subject=RSVP">novios@example.com</a></li>
+          <li>📱 WhatsApp: <a class="underline" target="_blank" rel="noopener" href="https://wa.me/5491122223333?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20casamiento%20%F0%9F%92%8D">Enviar mensaje</a></li>
+        </ul>
+        <p class="mt-6 text-accent/70 text-sm">* Reemplazá los enlaces con tus datos reales.</p>
+      </div>
+      <div class="rounded-3xl overflow-hidden border border-accent/10 bg-white">
+        <!-- TODO: Pegá aquí el iframe de tu formulario de Google Forms o Typeform -->
+        <div class="p-6">
+          <p class="text-accent/70">Acá va tu formulario incrustado:</p>
+        </div>
+        <iframe title="RSVP" src="https://docs.google.com/forms/d/e/1FAIpQLSeExample/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- === DRESS CODE & REGALOS === -->
+  <section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+      <div class="rounded-3xl border border-accent/10 p-8">
+        <h3 class="text-2xl font-serif">Dress code</h3>
+        <p class="mt-3 text-accent/80">Elegante sport / formal. Colores claros recomendados.</p>
+      </div>
+      <div class="rounded-3xl border border-accent/10 p-8">
+        <h3 class="text-2xl font-serif">Regalos</h3>
+        <p class="mt-3 text-accent/80">Tu presencia es lo más importante. Si querés hacernos un regalo, podés ayudarnos con la luna de miel ✈️</p>
+        <ul class="mt-4 text-accent/80 space-y-1">
+          <li>CBU/CVU: 00000031000000000000000000<span class="font-mono">00000000-000000000000000000</span></li>
+          <li>Alias: ELIYALE.BODA<span class="font-mono">NOMBRES.BODA</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- === FAQ === -->
+  <section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div class="rounded-3xl border border-accent/10 p-6 md:p-8">
+      <h2 class="text-3xl md:text-4xl font-serif">Preguntas frecuentes</h2>
+      <div class="mt-6 divide-y divide-accent/10" id="faq">
+        <details class="group py-4">
+          <summary class="cursor-pointer list-none flex items-center justify-between">
+            <span class="font-medium">¿Puedo ir con acompañante?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="mt-2 text-accent/70">Indicá en el RSVP si vas con acompañante. ¡Gracias!</p>
+        </details>
+        <details class="group py-4">
+          <summary class="cursor-pointer list-none flex items-center justify-between">
+            <span class="font-medium">¿Hay estacionamiento?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="mt-2 text-accent/70">Sí, en el lugar hay espacio para [X] autos. También podés usar apps de movilidad.</p>
+        </details>
+        <details class="group py-4">
+          <summary class="cursor-pointer list-none flex items-center justify-between">
+            <span class="font-medium">¿Niños?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="mt-2 text-accent/70">Amamos a los peques, pero preferimos una noche para adultos ♥</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-accent/60">
+    <p>Hecho con ♥ por [Tu nombre].</p>
+    <p class="mt-1">Compartí este enlace: <span class="underline decoration-dotted" id="shareUrl"></span></p>
+  </footer>
+
+  <script>
+    // === Countdown ===
+    (function () {
+      const wrap = document.querySelector('[data-event-datetime]');
+      if (!wrap) return;
+      const target = new Date(wrap.getAttribute('data-event-datetime')).getTime();
+      const d = document.getElementById('d');
+      const h = document.getElementById('h');
+      const m = document.getElementById('m');
+      const s = document.getElementById('s');
+      const tick = () => {
+        const now = new Date().getTime();
+        let diff = Math.max(0, target - now);
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= days * (1000 * 60 * 60 * 24);
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        diff -= hours * (1000 * 60 * 60);
+        const mins = Math.floor(diff / (1000 * 60));
+        diff -= mins * (1000 * 60);
+        const secs = Math.floor(diff / 1000);
+        d.textContent = days; h.textContent = hours; m.textContent = mins; s.textContent = secs;
+      };
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // === Share URL ===
+    (function () {
+      const el = document.getElementById('shareUrl');
+      if (el) el.textContent = window.location.href;
+    })();
+  </script>
+</body>
+</html>
