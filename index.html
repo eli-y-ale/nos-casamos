@@ -8,9 +8,12 @@
   <meta property="og:title" content="Invitación - Eli & Ale" />
   <meta property="og:description" content="¡Nos casamos! Te esperamos. Toda la info aquí." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop" />
   <meta name="theme-color" content="#EDE8D0" />
+
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -21,8 +24,8 @@
             sans: ['"Libre Baskerville"', 'serif']
           },
           colors: {
-            paper: '#EDE8D0',
-            brand: '#27532F',
+            paper: '#EDE8D0',   // beige
+            brand: '#27532F',   // verde inglés
           }
         }
       }
@@ -35,8 +38,8 @@
   <!-- HERO -->
   <header class="relative">
     <div class="absolute inset-0">
-      <!-- OJO: nombre con tilde -->
-      <img src="imagen/héroe.jpg" alt="Eli y Ale" class="h-full w-full object-cover object-center" />
+      <!-- RUTA EN INGLÉS -->
+      <img src="img/hero.jpg" alt="Eli y Ale" class="h-full w-full object-cover object-center" />
       <div class="absolute inset-0 bg-paper/65"></div>
     </div>
 
@@ -52,11 +55,7 @@
   </header>
 
   <!-- COUNTDOWN -->
-  <section id="countdown" class="max-w-6xl mx-auto px-6 py-10 md:py-14">
+  <section id="countdown" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
     <div class="rounded-3xl border border-brand/15 p-8 md:p-10 text-center bg-white/30">
-      <h2 class="text-3xl md:4xl font-serif font-bold">Falta muy poco</h2>
-      <p class="mt-2 text-brand/70">Guardá la fecha y compartí este sitio con quien quieras ♥</p>
-      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3" data-event-datetime="2026-02-20T21:00:00-03:00">
-        <div class="rounded-2xl border border-brand/10 p-5"><div class="text-3xl md:text-4xl font-bold" id="d">0</div><div class="text-brand/60">Días</div></div>
-        <div class="rounded-2xl border border-brand/10 p-5"><div class="text-3xl md:text-4xl font-bold" id="h">0</div><div class="text-brand/60">Horas</div></div>
-        <div class="rounded-2xl border border-brand/10 p-5"><div class="text-3xl md:text-4xl font-bold" id="m">0</div><div class="te
+      <h2 class="text-3xl md:text-4xl font-serif font-bold">Falta muy poco</h2>
+      <p class="mt-2 text-brand/70">Guardá la fecha y compartí este
