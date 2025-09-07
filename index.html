@@ -43,33 +43,23 @@
 
   <!-- ============= HERO ============= -->
   <header class="relative min-h-[70vh] md:min-h-[78vh] overflow-hidden grain">
-    <!-- Imagen de portada -->
     <img src="img/hero.jpg" alt="Eli y Ale"
          class="absolute inset-0 h-full w-full object-cover object-center" />
-    <!-- Velo para legibilidad -->
     <div class="absolute inset-0 bg-black/25 md:bg-black/20"></div>
 
-    <!-- Contenido -->
     <div class="relative max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-16 md:pb-20 text-center text-white">
       <p class="tracking-[0.35em] text-xs md:text-sm uppercase opacity-90">¡NOS CASAMOS!</p>
-
-      <!-- Título más grande -->
-      <h1 class="mt-4 font-bold leading-tight text-[clamp(50px,10vw,150px)]">
-        Eli &amp; Ale
-      </h1>
-
-      <!-- Subtítulo más chico -->
+      <h1 class="mt-4 font-bold leading-tight text-[clamp(50px,10vw,150px)]">Eli &amp; Ale</h1>
       <p class="mt-3 md:mt-4 text-[clamp(12px,1.8vw,18px)] opacity-95">
         Sábado 14 de Febrero de 2026, Laprida, Buenos Aires.
       </p>
-
       <div class="mt-7 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
         <a href="#rsvp"
-           class="inline-flex items-center justify-center rounded-2xl px-6 py-3 bg-ink text-white hover:bg-ink2 transition">
+           class="inline-flex items-center justify-center rounded-2xl px-5 py-2 text-sm md:text-base bg-ink text-white hover:bg-ink2 transition">
           Confirmar asistencia
         </a>
         <a href="#detalle"
-           class="inline-flex items-center justify-center rounded-2xl px-6 py-3 border border-white/40 text-white/95 hover:bg-white/10 transition">
+           class="inline-flex items-center justify-center rounded-2xl px-5 py-2 text-sm md:text-base border border-white/40 text-white/95 hover:bg-white/10 transition">
           Ver detalles
         </a>
       </div>
@@ -77,31 +67,17 @@
   </header>
 
   <main class="relative z-10">
-    <!-- ============= COUNTDOWN (D/H/M/S) ============= -->
+    <!-- COUNTDOWN -->
     <section id="countdown" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
       <div class="rounded-3xl border border-ink/15 p-8 md:p-10 text-center bg-white/60">
         <h2 class="text-3xl md:text-4xl font-bold">¡Nos emociona compartir este día con vos!</h2>
-
         <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3"
              data-event-datetime="2026-02-14T21:00:00-03:00">
-          <div class="rounded-2xl border border-ink/15 p-5">
-            <div id="d" class="text-3xl md:text-4xl font-bold">0</div>
-            <div class="opacity-70">Días</div>
-          </div>
-          <div class="rounded-2xl border border-ink/15 p-5">
-            <div id="h" class="text-3xl md:text-4xl font-bold">0</div>
-            <div class="opacity-70">Horas</div>
-          </div>
-          <div class="rounded-2xl border border-ink/15 p-5">
-            <div id="m" class="text-3xl md:text-4xl font-bold">0</div>
-            <div class="opacity-70">Minutos</div>
-          </div>
-          <div class="rounded-2xl border border-ink/15 p-5">
-            <div id="s" class="text-3xl md:text-4xl font-bold">0</div>
-            <div class="opacity-70">Segundos</div>
-          </div>
+          <div class="rounded-2xl border border-ink/15 p-5"><div id="d" class="text-3xl md:text-4xl font-bold">0</div><div class="opacity-70">Días</div></div>
+          <div class="rounded-2xl border border-ink/15 p-5"><div id="h" class="text-3xl md:text-4xl font-bold">0</div><div class="opacity-70">Horas</div></div>
+          <div class="rounded-2xl border border-ink/15 p-5"><div id="m" class="text-3xl md:text-4xl font-bold">0</div><div class="opacity-70">Minutos</div></div>
+          <div class="rounded-2xl border border-ink/15 p-5"><div id="s" class="text-3xl md:text-4xl font-bold">0</div><div class="opacity-70">Segundos</div></div>
         </div>
-
         <div class="mt-6">
           <a class="underline hover:no-underline"
              target="_blank" rel="noopener"
@@ -112,7 +88,7 @@
       </div>
     </section>
 
-    <!-- ============= SOBRE NOSOTROS ============= -->
+    <!-- SOBRE NOSOTROS -->
     <section id="nosotros" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
@@ -129,49 +105,33 @@
       </div>
     </section>
 
-    <!-- ============= DETALLE ============= -->
+    <!-- DETALLE -->
     <section id="detalle" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         <div>
           <h2 class="text-3xl md:text-4xl font-bold">La celebración</h2>
-
           <ul class="mt-6 space-y-4 opacity-90">
-            <!-- Ceremonia (SVG) -->
             <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2l4 4-4 4-4-4 4-4zm7 9v10h-2v-8h-2v8H9v-8H7v8H5V11H3v12h18V11h-2z"/>
-              </svg>
-              <div>
-                <div><strong>Ceremonia:</strong> 21:00 hs</div>
-                <div>Parroquia Santos Joaquín y Ana, Laprida.</div>
-              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l4 4-4 4-4-4 4-4zm7 9v10h-2v-8h-2v8H9v-8H7v8H5V11H3v12h18V11h-2z"/></svg>
+              <div><div><strong>Ceremonia:</strong> 21:00 hs</div><div>Parroquia Santos Joaquín y Ana, Laprida.</div></div>
             </li>
-
-            <!-- Fiesta (SVG) -->
             <li class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M7 2h10v2H7V2zm9 4H8l-1 9h10l-1-9zm-8 11h6v2H8v-2zM6 22h12v-2H6v2z"/>
-              </svg>
-              <div>
-                <div><strong>Fiesta:</strong> 21:30 hs</div>
-                <div>Centro Recreativo, Laprida.</div>
-              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10v2H7V2zm9 4H8l-1 9h10l-1-9zm-8 11h6v2H8v-2zM6 22h12v-2H6v2z"/></svg>
+              <div><div><strong>Fiesta:</strong> 21:30 hs</div><div>Centro Recreativo, Laprida.</div></div>
             </li>
           </ul>
-
           <div class="mt-7 flex gap-3">
-            <a href="#mapa" class="rounded-2xl px-5 py-3 border border-ink/25 hover:bg-ink/5 transition">Cómo llegar</a>
-            <a href="#rsvp" class="rounded-2xl px-5 py-3 bg-ink text-white hover:bg-ink2 transition">Confirmar asistencia</a>
+            <a href="#mapa" class="rounded-2xl px-5 py-2 text-sm md:text-base border border-ink/25 hover:bg-ink/5 transition">Cómo llegar</a>
+            <a href="#rsvp" class="rounded-2xl px-5 py-2 text-sm md:text-base bg-ink text-white hover:bg-ink2 transition">Confirmar asistencia</a>
           </div>
         </div>
-
         <div class="rounded-3xl overflow-hidden border border-ink/15 bg-white/60">
           <img src="img/la-celebracion.jpg" alt="La celebración" class="w-full h-full object-cover">
         </div>
       </div>
     </section>
 
-    <!-- ============= MAPA ============= -->
+    <!-- MAPA -->
     <section id="mapa" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
       <div class="rounded-3xl border border-ink/15 overflow-hidden bg-white/60">
         <div class="p-6 md:p-8">
@@ -186,26 +146,27 @@
           </div>
         </div>
         <div class="aspect-[16/9] w-full">
-          <!-- Tu iframe embebido -->
           <iframe class="w-full h-full" style="border:0" loading="lazy" allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6326.780420024609!2d-60.80864632229003!3d-37.54586940000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9593649dac63201f%3A0x8003df1e4d68a12a!2sCentro%20Recreativo%20Restorante!5e0!3m2!1ses-419!2sar!4v1757170871728!5m2!1ses-419!2sar">
-          </iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6326.780420024609!2d-60.80864632229003!3d-37.54586940000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9593649dac63201f%3A0x8003df1e4d68a12a!2sCentro%20Recreativo%20Restorante!5e0!3m2!1ses-419!2sar!4v1757170871728!5m2!1ses-419!2sar"></iframe>
         </div>
       </div>
     </section>
 
-    <!-- ============= RSVP (WhatsApp) ============= -->
+    <!-- RSVP -->
     <section id="rsvp" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
       <div class="rounded-3xl overflow-hidden border border-ink/15 bg-white p-6 md:p-10">
         <h2 class="text-3xl md:text-4xl font-bold">Confirmación (RSVP)</h2>
         <p class="mt-3 opacity-90">
-          Reservá tu lugar por WhatsApp. ¡Te esperamos!
+          Reservá tu lugar por WhatsApp. ¡Te esperamos para compartir esta noche tan especial!<br>
+          Al confirmar, por favor indicanos:<br>
+          – Si venís con acompañante.<br>
+          – Si sos celíaco/a o tenés alguna restricción alimentaria.
         </p>
         <div class="mt-6">
-          <a class="inline-flex items-center gap-2 rounded-2xl px-6 py-3 bg-ink text-white hover:bg-ink2 transition"
+          <a class="inline-flex items-center gap-2 rounded-2xl px-5 py-2 text-sm md:text-base bg-ink text-white hover:bg-ink2 transition"
              target="_blank" rel="noopener"
-             href="https://wa.me/5492983565445?text=Hola%20Eli%20y%20Ale%2C%20confirmo%20mi%20asistencia%20para%20el%2014%20de%20febrero%20de%202026%20a%20las%2021%3A00.%20Mi%20nombre%20es%3A%20">
+             href="https://wa.me/5492983565445?text=Hola%20Eli%20y%20Ale%2C%20confirmo%20mi%20asistencia.%20Acompa%C3%B1ante%3A%20___%20%7C%20Restricciones%20alimentarias%3A%20___">
             Confirmar por WhatsApp
           </a>
         </div>
@@ -220,7 +181,6 @@
 
   <!-- Scripts -->
   <script>
-    // Countdown (D/H/M/S) en horario local AR (usa -03:00 en el atributo)
     (function(){
       const wrap = document.querySelector('[data-event-datetime]');
       if(!wrap) return;
@@ -240,8 +200,6 @@
       };
       tick(); setInterval(tick, 1000);
     })();
-
-    // URL para compartir
     (function(){
       const el = document.getElementById('shareUrl');
       if (el) el.textContent = window.location.href;
