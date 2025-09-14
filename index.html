@@ -41,14 +41,19 @@
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%25" height="100%25" filter="url(%23n)" opacity="0.35"/></svg>');
       mix-blend-mode: multiply;
     }
-    /* Hero: bajar el bloque de texto para no tapar caras */
-    .hero-pad {
-      padding-top: clamp(5rem, 8vw, 9rem);
-      padding-bottom: clamp(7rem, 24vw, 18rem);
+
+    /* HERO: empujar el bloque de texto más ABAJO para no tapar las caras */
+    .hero-pad{
+      /* en desktop: bien abajo */
+      padding-top: clamp(12rem, 32vh, 38vh);
+      padding-bottom: clamp(2rem, 7vh, 10vh);
     }
-    /* para móviles, empujamos más abajo */
+    /* en móviles: aún más abajo */
     @media (max-width: 640px){
-      .hero-pad { padding-bottom: 28vh; }
+      .hero-pad{
+        padding-top: 36vh;
+        padding-bottom: 12vh;
+      }
     }
   </style>
 </head>
@@ -59,10 +64,11 @@
   <header class="relative grain">
     <div class="absolute inset-0">
       <img src="img/hero.jpg" alt="Eli y Ale" class="h-full w-full object-cover object-center"/>
-      <div class="absolute inset-0 bg-black/40 md:bg-black/35"></div>
+      <!-- un toque más de overlay para contraste al bajar el texto -->
+      <div class="absolute inset-0 bg-black/45 md:bg-black/40"></div>
     </div>
 
-    <!-- Bloque de texto bajado (para no tapar caras) -->
+    <!-- Bloque de texto bajado -->
     <div class="relative max-w-6xl mx-auto px-6 text-center text-white hero-pad">
       <p class="uppercase tracking-[0.35em] text-[clamp(12px,1.6vw,14px)]/none opacity-90">
         ¡NOS CASAMOS!
@@ -123,7 +129,6 @@
   <!-- ============= NUESTRA HISTORIA (texto izq / foto der) ============= -->
   <section id="nosotros" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
     <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-      <!-- texto -->
       <div>
         <h2 class="text-3xl md:text-4xl font-bold">Nuestra historia</h2>
         <p class="mt-4 leading-relaxed opacity-90">
@@ -133,7 +138,6 @@
           y nos alegraría que nos acompañes en este día tan especial.
         </p>
       </div>
-      <!-- imagen -->
       <div class="rounded-3xl overflow-hidden border border-ink/10">
         <img src="img/sobre-nosotros.jpg" alt="Eli y Ale" class="w-full h-full object-cover"/>
       </div>
@@ -143,11 +147,9 @@
   <!-- ============= LA CELEBRACIÓN (imagen IZQ / texto DER) ============= -->
   <section id="detalle" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
     <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-      <!-- imagen a la izquierda -->
       <div class="rounded-3xl overflow-hidden border border-ink/10 order-1">
         <img src="img/la-celebracion.jpg" alt="La celebración" class="w-full h-full object-cover"/>
       </div>
-      <!-- texto a la derecha -->
       <div class="order-2">
         <h2 class="text-3xl md:text-4xl font-bold">La celebración</h2>
         <p class="mt-4 opacity-90 leading-relaxed">
@@ -157,14 +159,12 @@
 
         <ul class="mt-6 space-y-3 opacity-95">
           <li>
-            <!-- Ícono reloj -->
             <span class="inline-flex w-5 h-5 align-middle mr-2 text-ink">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 11h-4V7h2v4h2z"/></svg>
             </span>
             <strong>Ceremonia:</strong> 21:00 hs — Parroquia Santos Joaquín y Ana, Laprida
           </li>
           <li>
-            <!-- Ícono confeti -->
             <span class="inline-flex w-5 h-5 align-middle mr-2 text-ink">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 22l7-2 9-9-5-5-9 9-2 7Zm7-4l-3 1 1-3 7-7 2 2-7 7Zm10-13l-2 2-2-2 2-2 2 2Z"/></svg>
             </span>
@@ -208,13 +208,11 @@
   <!-- ============= PRESENTES ============= -->
   <section id="presentes" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
     <div class="text-center mb-6">
-      <!-- Icono regalo -->
       <div class="mx-auto w-10 h-10 text-ink">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M20 7h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.12 0-2.09.62-2.6 1.53L12 5l-.4-.47A2.986 2.986 0 0 0 9 3C7.34 3 6 4.34 6 6c0 .35.07.69.18 1H4c-1.1 0-2 .9-2 2v2h20V9c0-1.1-.9-2-2-2ZM9 5c.55 0 1 .45 1 1l-1 1H8c-.55 0-1-.45-1-1s.45-1 1-1h1Zm6 0c.55 0 1 .45 1 1s-.45 1-1 1h-1l-1-1c0-.55.45-1 1-1h1ZM2 13v6c0 1.1.9 2 2 2h6v-8H2Zm12 0v8h6c1.1 0 2-.9 2-2v-6h-8Z"/>
         </svg>
       </div>
-
       <h2 class="mt-3 text-3xl md:text-4xl font-bold">Presentes</h2>
     </div>
 
@@ -225,7 +223,6 @@
       </p>
 
       <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <!-- Alias -->
         <div class="rounded-2xl border border-ink/15 p-4 bg-white">
           <div class="text-sm opacity-70">Alias</div>
           <div class="mt-1 font-mono text-lg break-all select-all" id="aliasText">casamientoeliyale</div>
@@ -238,7 +235,6 @@
           </div>
         </div>
 
-        <!-- CBU -->
         <div class="rounded-2xl border border-ink/15 p-4 bg-white">
           <div class="text-sm opacity-70">CBU</div>
           <div class="mt-1 font-mono text-lg break-all select-all" id="cbuText">0000003100000001234567</div>
@@ -299,10 +295,9 @@
     </div>
   </section>
 
-  <!-- ============= FOOTER (limpio) ============= -->
   <footer class="py-10 text-center text-ink/60"></footer>
 
-  <!-- ============= SCRIPTS ============= -->
+  <!-- SCRIPTS -->
   <script>
     // Countdown
     (function () {
