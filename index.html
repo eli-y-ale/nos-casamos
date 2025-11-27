@@ -242,3 +242,98 @@
 
       <div class="mt-4 rounded-2xl border border-ink/10 p-4 bg-white/70">
         <div class="text-sm opacity-70">Titular</div>
+        <div class="mt-1 font-semibold">ELIAS ALEJO HORACIO</div>
+      </div>
+
+      <p class="mt-6 text-center font-bold italic">
+        ¡Gracias por ayudarnos a seguir construyendo nuestra historia!
+      </p>
+    </div>
+  </section>
+
+  <!-- ============= RSVP ============= -->
+  <section id="rsvp" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold">Confirmación (RSVP)</h2>
+
+        <!-- 🔥 TEXTO MODIFICADO ACÁ -->
+        <p class="mt-3 opacity-90">
+          <strong>Confirmá tu lugar por WhatsApp, e indicanos si alguno tiene celiaquía o restricciones alimentarias. ¡Gracias!</strong>
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+
+          <!-- 🔥 LINK DE WHATSAPP MODIFICADO -->
+          <a target="_blank" rel="noopener"
+             href="https://wa.me/5492983565445?text=Hola%20Eli%2C%20quiero%20confirmar%20mi%20asistencia%20%F0%9F%92%8D%20(Nombre%2C%20si%20hay%20alguna%20restricci%C3%B3n%20alimentaria)"
+             class="rounded-2xl px-5 py-3 bg-ink text-white hover:bg-ink2 transition">
+            Confirmar con Eli
+          </a>
+
+          <!-- 🔥 LINK DE WHATSAPP MODIFICADO -->
+          <a target="_blank" rel="noopener"
+             href="https://wa.me/542284663677?text=Hola%20Ale%2C%20quiero%20confirmar%20mi%20asistencia%20%F0%9F%92%8D%20(Nombre%2C%20si%20hay%20alguna%20restricci%C3%B3n%20alimentaria)"
+             class="rounded-2xl px-5 py-3 border border-ink/20 hover:bg-ink/5 transition">
+            Confirmar con Ale
+          </a>
+
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden border border-ink/10 bg-white/60 p-6 text-sm opacity-90">
+        <p class="mb-2"><strong>Tips útiles</strong></p>
+        <ul class="list-disc ml-5 space-y-2">
+          <li>Si no podés asistir, avisanos para organizar mejor los lugares.</li>
+          <li>Si tenés alguna condición alimentaria, contanos en el mensaje.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-ink/60"></footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Countdown
+    (function () {
+      const wrap = document.querySelector('[data-event-datetime]');
+      if (!wrap) return;
+      const target = new Date(wrap.getAttribute('data-event-datetime')).getTime();
+      const d = document.getElementById('d'),
+            h = document.getElementById('h'),
+            m = document.getElementById('m'),
+            s = document.getElementById('s');
+      const tick = () => {
+        const now = new Date().getTime();
+        let diff = Math.max(0, target - now);
+        const days = Math.floor(diff / (1000*60*60*24));
+        diff -= days * (1000*60*60*24);
+        const hours = Math.floor(diff / (1000*60*60));
+        diff -= hours * (1000*60*60);
+        const mins = Math.floor(diff / (1000*60));
+        diff -= mins * (1000*60);
+        const secs = Math.floor(diff / 1000);
+        d.textContent = days; h.textContent = hours; m.textContent = mins; s.textContent = secs;
+      };
+      tick(); setInterval(tick, 1000);
+    })();
+
+    // Copiar Alias / CBU
+    document.querySelectorAll('[data-copy-target]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const targetSel = btn.getAttribute('data-copy-target');
+        const fbSel     = btn.getAttribute('data-copy-feedback');
+        const el = document.querySelector(targetSel);
+        const fb = document.querySelector(fbSel);
+        try {
+          await navigator.clipboard.writeText(el.textContent.trim());
+          if (fb) { fb.textContent = '¡Copiado!'; setTimeout(()=>fb.textContent='', 1500); }
+        } catch(e) {
+          if (fb) { fb.textContent = 'No se pudo copiar'; setTimeout(()=>fb.textContent='', 1500); }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
